@@ -12,6 +12,15 @@ export default class AnalyticsPlugin {
   }
 
   /**
+   * Dispatch a pageView event
+   * @param page
+   */
+   pageView (page) {
+     logDebug('Dispatching pageView', { page })
+     ga('send', 'pageview', page)
+   }
+
+  /**
    * Dispatch an analytics event
    *
    * @param category
